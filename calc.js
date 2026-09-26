@@ -1,21 +1,6 @@
-function appendToDisplay(value){
-    const display = document.getElementById('display');
-    display.value += value;
-}
-function clearDisplay() {
-    const display = document.getElementById("display");
-    display.value = "";
-}
-function deleteLast() {
-    const display = document.getElementById("display");
-    display.value = display.value.slice(0,-1);
-}
-function calculateResult(){
-    const display = document.getElementById("display");
-    try {
-        display.value = eval(display.value);
-    }   
-    catch(error) {
-        display.value = "Error!";
-    }
+function calculate() {
+  var num1 = document.getElementById('num1').value;
+  var num2 = document.getElementById('num2').value;
+  var result = document.getElementById('result');
+  result.textContent = num1 + ' + num2;
 }
